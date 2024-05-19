@@ -16,6 +16,20 @@ function Viewport() {
 		}, true);
 	}, []);
 
+	// useEffect(() => {
+	// 	let lastEvent: DeviceMotionEvent | null = null;
+
+	// 	window.addEventListener("devicemotion", (event: DeviceMotionEvent) => {
+	// 		lastEvent = event;
+	// 	});
+
+	// 	window.setInterval(() => {
+	// 		if (lastEvent !== null) {
+	// 			console.log(lastEvent);
+	// 		}
+	// 	}, 1500)
+	// }, []);
+
 	const euler = new THREE.Euler(orientation.beta, orientation.alpha, -1 * orientation.gamma, 'YXZ');
 
 	return (
