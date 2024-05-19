@@ -8,7 +8,9 @@ function App() {
   const [readyState, setReadyState] = useState(false);
 
   useEffect(() => {
+    // @ts-ignore
     if (window.DeviceOrientationEvent !== undefined && typeof window.DeviceOrientationEvent.requestPermission === 'function') {
+      // @ts-ignore
       window.DeviceOrientationEvent.requestPermission().then((response) => {
         if (response === 'granted') {
           setReadyState(true);
